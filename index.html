@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satisfaction Score Prediction</title>
+    <link rel="stylesheet" href="../static/css/style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="intro-text">
+        <h1>Satisfaction Score Prediction</h1>
+        <h4>Welcome to the Satisfaction Score Prediction tool! </h4>
+        <p>
+             As a business owner or manager, you can assess the level of customer satisfaction based on three factors: 
+            the number of items purchased, whether the customer has opted for a warranty extension, and the customer’s loyalty score.  
+            This prediction helps you understand customer satisfaction, improve your service, and boost customer retention.
+        </p>
+        <h4> Please enter the details below to predict the satisfaction score of a customer.</h4>
+    </div>
+    <div class="form-container">
+        <form action="/predict" method="POST">
+            <div class="input-box">
+                <label for="Items Purchased">Items Purchased</label>
+                <p>Enter the number of items purchased by the customer.</p>
+                <input type="number" name="Items Purchased" min="0" step="1" required>
+            </div>
+            
+            <div class="input-box">
+                <label for="Warranty Extension">Warranty Extension</label>
+                <p>Did they opt for a warranty extension?</p>
+                <select name="Warranty Extension" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            <div class="input-box">
+                <label for="Loyalty Score">Loyalty Score</label>
+                <p>The loyalty score should be assigned based on how loyal the customer is to your brand, ranging from 0 to 40. 
+                    A score of 0 indicates no loyalty, while a score of 40 indicates maximum loyalty. </p>
+                <input type="number" name="Loyalty Score" min="0" step="1" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

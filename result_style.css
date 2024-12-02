@@ -1,0 +1,59 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-screen height */
+}
+
+/* Center container styling */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Limit the width for larger screens */
+}
+
+/* Heading styling */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Prediction styling */
+.prediction {
+    font-weight:bold;
+    color: #4CAF50; /* Green to indicate positivity */
+    font-size: 35px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 25px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Back link styling */
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}

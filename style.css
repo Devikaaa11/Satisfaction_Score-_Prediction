@@ -1,0 +1,118 @@
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:antiquewhite; /* Fallback background color */
+    position: relative; /* Needed for positioning the pseudo-element */
+    min-height: 100vh;
+}
+
+/* Styling for the background image */
+body::after {
+    content: ""; /* Create a pseudo-element to hold the background image */
+    position: absolute;
+    top: 0; /* Adjust the vertical position */
+    left:0; /* Adjust the horizontal position */
+    background-image: url('/static/img/background.jpg.webp'); /* Path to your image */
+    background-size: contain; /* Ensure the image scales properly without cropping */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    opacity: 0.3; /* Set transparency (0.0 to 1.0) */
+    width: 345px; /* Control the size of the image */
+    height: 500px; /* Control the size of the image */
+    pointer-events: none; /* Ensure the image doesn’t block interaction with other elements */
+    z-index: 1; /* Keep the image below the main content */
+}
+
+/* Main content styling */
+.container {
+    position: relative; /* Ensures content is layered properly over the background image */
+    z-index: 2; /* Places content above the background image */
+    width: 100%;
+}
+
+/* Styling for the intro text */
+.intro-text {
+    text-align: center;
+    margin-top: 30px; /* Adjust top spacing */
+    margin-bottom: 30px;
+    max-width: 800px; /* Limit width for readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-text h1 {
+    font-size: 60px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.intro-text h4 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.intro-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px; /* Keep paragraph text within a readable width */
+    margin: 0 auto; /* Center the paragraph text */
+}
+
+/* Form container styling */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Center the form and control its width */
+    margin: 0 auto;
+}
+
+/* Add spacing for form elements */
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-box p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+/* Input fields */
+.input-box input[type="number"], .input-box select {
+    width: 100%; /* Make inputs take full available width inside their container */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Button styling */
+.submit-btn {
+    background-color:deepskyblue;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
